@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.css">
+  </head>
+
+  <body>
+    <div class="page-header">      
+      <h1 align="center">  Snippet Viewer  </h1>
+      <!--<h4 align="center"> (minimum sentiment threshold :<font color=#60B2D0> 0.5 </font>; maximum charater length:<font color=#60B2D0> 120</font>; maximum snippet age: <font color=#60B2D0> 2 years </font>; photo requirement: <font color=#60B2D0>not relaxed</font>) </h4>-->
+      </div>
+    <div class="container">
+      Extreme care has been taken to rank those snippets higher that are not contaminated with other food items. But in some cases, we just have no other option than to surface the snippet with a couple other dishes. Better than nothing, though! 
+     </div>
+    <div class="container">
+      <table data-toggle="table" 
+	     data-url="formattedSnippets.json"
+	     data-cache="false" 
+	     data-height="699" 
+	     data-pagination="true"
+	     data-search="true"
+	     data-row-style="rowStyle">
+	<thead>
+        <tr>
+	  <th data-field="rid">rid</th>
+          <th data-field="restaurant">restaurant</th>
+	  <th data-field="tag_name">dish</th>
+	  <th data-field="snippet">proposed snippet</th>
+	  <th data-field="has_photo">has photo?</th> 
+	  <th data-field="row_id">Identifier</th>
+        </tr>
+	</thead>
+      </table>
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.js"></script>
+    </body>
+
+</html>

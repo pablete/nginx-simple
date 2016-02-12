@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.css">
+  </head>
+
+  <body>
+    <div class="page-header">      
+      <h1 align="center">  NYC Restaurant Week Reviews  </h1>
+      </div>
+    <div class="container">
+      This table shows the best three reviews from the top 10 highly reviewed restaurants during restaurant week (RW). This is how it was done:
+      
+<ol>
+  <li>For every RID participating in RW, we find all reviews that mention RW. </li>
+  <li>We score each review using our sentiment model (the score varies between -1.0 i.e. extremely negative and +1.0 i.e. extremely positive) </li>
+  <li>For each RID we compute a shrinkage adjusted  average sentiment score: (sum of scores)/(Number of reviews + 5), where we penalize RIDs that have less than 5 reviews. We rank the restaurants by this avg score and pick the top 10 RIDs. </li>
+<li>For each of the top 10 RIDs, we surface the top 3 highest sentiment reviews.</li>
+</ol> 
+      
+     </div>
+    <div class="container">
+      <table data-toggle="table" 
+	     data-url="nyc.json"
+	     data-cache="false" 
+	     data-height="699" 
+	     data-pagination="true"
+	     data-search="true"
+	     data-row-style="rowStyle">
+	<thead>
+        <tr>
+	  <th data-field="event">event</th>
+	  <th data-field="RESTAURANTID">rid</th>
+          <th data-field="RESTAURANTNAME">restaurant</th>
+	  <th data-field="REVIEWTEXT">proposed review </th>
+	  <th data-field="sentiment">predicted sentiment </th> 
+	  <th data-field="BVREVIEWID">review id </th>
+	  <th data-field="DINED_DATE_LOCAL"> dine date </th>
+        </tr>
+	</thead>
+      </table>
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.js"></script>
+    </body>
+
+</html>

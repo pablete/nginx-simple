@@ -1,0 +1,191 @@
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
+<div id="chartContainer">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.1.0.min.js"></script>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("#chartContainer", 1080, 800);
+      d3.tsv("test2.tsv", function (data) {
+        var myChart = new dimple.chart(svg, data);
+        myChart.setBounds(80, 250, 990, 300)
+        var x = myChart.addTimeAxis("x", "date","%Y-%m-%d %H:%M:%S","%d %b");
+        x.addOrderRule("Date");
+        x.overrideMin = new Date("2015-03-03");
+        x.overrideMax = new Date("2015-03-08");
+        x.timePeriod = d3.time.day;
+        x.timeInterval = 1;
+        x.fontSize = "20px";
+        x.fontFamily = "Source Sans Pro, sans-serif";
+        x.title = "Date";
+        console.log(x);
+        var y = myChart.addMeasureAxis("y", "sentiment_polarity");
+        var z = myChart.addMeasureAxis("z", "scaled_rt_count");
+
+        y.fontSize = "20px";
+        y.fontFamily = "Source Sans Pro, sans-serif";
+        y.title = "Sentiment Polarity";
+        y.color = 'red';
+        z.overrideMax = 10.;
+        //z.overrideMin = 0.5;
+        console.log(y);
+        var bubbles = myChart.addSeries(["text","user","date","retweet_count"], dimple.plot.bubble);
+        //myChart.addLegend(180, 10, 360, 20, "right");
+        // Handle the hover event - overriding the default behaviour
+        bubbles.addEventHandler("mouseover", onHover);
+        // Handle the leave event - overriding the default behaviour
+        bubbles.addEventHandler("mouseleave", onLeave);
+        myChart.draw();
+        //x.titleShape.text("Date");
+        
+        y.titleShape.text("Sentiment Polarity");
+        var x0 = 80;
+        var y0 = 20;
+        rightbox = svg.append("g");
+        rightbox.append("text")
+        .attr("x",x0)
+        .attr("y",y0)
+        .attr("dy",1)
+        .text("REBRANDING OPENTABLE: A WEEK IN TWEETS")
+        .style("fill","#DA3743")
+        .style("font-size", 16)
+        .style("font-weight",600)
+        .style("font-family", 'Source Sans Pro')
+        .call(wrap, 730);
+
+      <!-- rightbox.append("text") -->
+<!--         .attr("x",x0) -->
+<!--         .attr("y",400+15) -->
+<!--         .attr("dy",1) -->
+<!--         .text("A WEEK IN TWEETS") -->
+<!--         .style("fill","#DA3743") -->
+<!--         .style("font-size", 14) -->
+<!--          .style("font-weight",700) -->
+<!--         .style("font-family", "'Source Sans Pro', sans-serif") -->
+<!--         .call(wrap, 230); -->
+
+         rightbox.append("text")
+        .attr("x",x0)
+        .attr("y",y0+25)
+        .attr("dy",1)
+        .text("OpenTable unvieled its new brand idenitity on March 03, 2015. We took a look at the response on Twitter over the span of a week, and computed a sentiment for each tweet. A tweet is shown as a bubble with its vertical position indicating its sentiment polarity, so that tweets with more positive sentiments are higher in the plot. We removed retweets, and scaled the tweet bubbles such that bigger bubbles indicate tweets with larger number of retweets.")
+        .style("fill","#878787")
+        .style("font-size", 20)
+        .style("font-family", "'Source Sans Pro', sans-serif")
+        .call(wrap, 670);
+
+         rightbox.append("text")
+        .attr("x",x0+750)
+        .attr("y",y0+15)
+        .attr("dy",1)
+        .text("Hover over a bubble to reveal the tweet")
+        .style("fill","#878787")
+        .style("font-size", 14)
+        .style("font-family", "'Source Sans Pro', sans-serif")
+        .call(wrap, 100);
+
+
+      });
+
+    function onHover(e) { 
+    console.log(e.seriesValue);
+    popup = svg.append("g");
+    var x = 780;
+    var y = 20;
+    // Add a rectangle surrounding the text
+    popup
+   .append("rect")
+   .attr("x",x)
+   .attr("y",y)
+   .attr("width", 270)
+   .attr("height",150)
+   .attr("rx", 5)
+   .attr("ry", 5)
+   .attr("opacity", "1.0")
+   .style("fill", 'white');
+
+
+  // Add multiple lines of text
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y + 80)
+  .attr('dy',1)
+  .text(e.seriesValue[0])
+  .call(wrap, 200)
+  .style("font-size", 18)
+  .style("font-family", "'Source Sans Pro', sans-serif")
+          .style("fill","#666666")
+
+
+   //.call(wrap,100);
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y + 25)
+  .attr('dy',1)
+  .text(e.seriesValue[1]) 
+  .style("font-size", 24)
+  .style("font-family", 'Source Sans Pro, sans-serif')
+  .style("fill", '#60B2D0')
+
+
+
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y + 65)
+  .attr('dy',1)
+  .text('Retweet count: '+e.seriesValue[3] )
+  .style("font-size", 14)
+          .style("fill","#B1D9E7")
+
+
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y+45)
+  .attr('dy',1)
+  .text("Posted on: "+e.seriesValue[2] )
+  .style("font-size", 14)
+  .style("font-family", "'Source Sans Pro', sans-serif")
+  .style("fill","#B1D9E7")
+
+    }
+
+   function onLeave(e) {
+    // Remove the popup
+    if (popup !== null) {
+    popup.remove();
+    }
+    console.log("ggg");
+    }
+
+   function wrap(text, width) {
+       
+    text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        x = text.attr("x"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
+        
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+        console.log(tspan.node().getComputedTextLength());
+      }
+    }}
+  )}
+
+
+  </script>
+</div>

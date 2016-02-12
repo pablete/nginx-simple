@@ -1,0 +1,371 @@
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="buttons.css">
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://dimplejs.org/dist/dimple.v2.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.0.2/nouislider.js"></script>
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-md-12">
+  <div class="btn-group-xs" role="group" >
+  <!-- <p><h3 style="font-family:'Source Sans Pro, sans-serif'">Choose a metro to get started:</h3> </p> -->
+<br>  
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="4" name="San Francisco Bay Area">San Francisco Bay Area</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="8" name="New York / Tri-State Area">New York / Tri-State Area</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="3" name="Chicago / Illinois">Chicago / Illinois</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="9" name="Washington, D.C. Area">Washington, D.C. Area</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="7" name="Boston / New England">Boston / New England</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="13" name="Philadelphia / New Jersey Suburbs">Philadelphia / New Jersey Suburbs</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="6" name="Los Angeles">Los Angeles</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="5" name="Denver / Colorado">Denver / Colorado</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="16" name="Atlanta / Georgia">Atlanta / Georgia</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="17" name="Miami / Southeast Florida">Miami / Southeast Florida</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="2" name="Seattle / Eastern Washington">Seattle / Eastern Washington</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="15" name="San Diego">San Diego</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="10" name="Las Vegas">Las Vegas</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="74" name="Toronto / Ontario">Toronto / Ontario</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="18" name="Baltimore / Maryland">Baltimore / Maryland</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="50" name="Phoenix / Arizona">Phoenix / Arizona</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="20" name="Dallas - Fort Worth">Dallas - Fort Worth</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="12" name="Houston">Houston</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="46" name="Minneapolis - St. Paul">Minneapolis - St. Paul</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="496" name="Orange County">Orange County</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="34" name="Hawaii">Hawaii</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="73" name="Vancouver / British Columbia">Vancouver / British Columbia</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="91" name="South Carolina">South Carolina</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="11" name="Portland / Oregon">Portland / Oregon</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="28" name="Orlando / Central Florida East">Orlando / Central Florida East</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="92" name="Virginia">Virginia</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="14" name="New Orleans / Louisiana">New Orleans / Louisiana</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="84" name="Tampa / Central Florida West">Tampa / Central Florida West</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="38" name="Detroit / Eastern Michigan">Detroit / Eastern Michigan</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="52" name="Cleveland / Akron / Canton">Cleveland / Akron / Canton</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="26" name="Wisconsin">Wisconsin</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="87" name="Kansas City">Kansas City</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="22" name="Raleigh / Durham / Chapel Hill">Raleigh / Durham / Chapel Hill</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="44" name="Indiana">Indiana</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="80" name="California Central Coast">California Central Coast</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="48" name="St. Louis">St. Louis</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="33" name="Austin">Austin</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="77" name="Calgary / Southern Alberta">Calgary / Southern Alberta</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="31" name="Charlotte">Charlotte</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="90" name="Cincinnati / Dayton">Cincinnati / Dayton</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="21" name="Utah">Utah</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="75" name="Montreal / Quebec">Montreal / Quebec</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="86" name="Southwest Florida">Southwest Florida</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="81" name="Palm Springs / Palm Desert Cities">Palm Springs / Palm Desert Cities</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="30" name="Nashville">Nashville</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="62" name="Pittsburgh">Pittsburgh</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="94" name="Columbus">Columbus</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="89" name="Atlantic City / South Jersey Shore">Atlantic City / South Jersey Shore</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="35" name="Sacramento / Sacramento Valley">Sacramento / Sacramento Valley</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="83" name="Jacksonville / Northeast Florida">Jacksonville / Northeast Florida</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="43" name="Central Kentucky">Central Kentucky</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="19" name="San Antonio">San Antonio</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="42" name="New Mexico">New Mexico</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="27" name="Edmonton / Northern Alberta">Edmonton / Northern Alberta</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="99" name="Asheville / W. North Carolina">Asheville / W. North Carolina</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="36" name="Oklahoma City">Oklahoma City</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="79" name="Tahoe / Reno Area">Tahoe / Reno Area</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="70" name="Nebraska">Nebraska</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="215" name="Caribbean">Caribbean</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="45" name="Alabama">Alabama</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="100" name="Greensboro / Winston Salem / Highpoint">Greensboro / Winston Salem / Highpoint</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="427" name="Savannah">Savannah</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="367" name="Grand Rapids / Western Michigan">Grand Rapids / Western Michigan</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="251" name="Memphis">Memphis</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="82" name="Northwest Florida">Northwest Florida</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="85" name="Key West / Florida Keys">Key West / Florida Keys</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="248" name="East Tennessee">East Tennessee</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="57" name="Ciudad de M�xico">Ciudad de M�xico</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="69" name="Idaho">Idaho</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="104" name="Coastal North Carolina">Coastal North Carolina</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="227" name="Mississippi">Mississippi</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="97" name="Jackson Hole / Wyoming">Jackson Hole / Wyoming</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="212" name="Anchorage">Anchorage</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="58" name="Exclusive">Exclusive</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="54" name="Winnipeg / Manitoba">Winnipeg / Manitoba</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="68" name="Iowa">Iowa</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="406" name="Ottawa">Ottawa</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="98" name="Montana">Montana</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="391" name="Fresno / San Joaquin Valley">Fresno / San Joaquin Valley</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="379" name="Scranton / Poconos">Scranton / Poconos</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="274" name="Atlantic Canada">Atlantic Canada</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="346" name="Cancun / Riviera Maya">Cancun / Riviera Maya</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="370" name="Northern Michigan / Upper Peninsula    ">Northern Michigan / Upper Peninsula    </button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="96" name="Toledo">Toledo</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="436" name="Mobile">Mobile</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="257" name="West Virginia">West Virginia</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="95" name="Little Rock">Little Rock</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="433" name="Fayetteville / Northwest Arkansas">Fayetteville / Northwest Arkansas</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="254" name="South Dakota">South Dakota</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="56" name="El Paso">El Paso</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="439" name="Shreveport">Shreveport</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="451" name="Saskatchewan">Saskatchewan</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="397" name="Yosemite / Mammoth Lakes">Yosemite / Mammoth Lakes</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="101" name="Pinehurst">Pinehurst</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="421" name="Central Texas">Central Texas</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="307" name="Cabo San Lucas">Cabo San Lucas</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="355" name="Monterrey">Monterrey</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="230" name="Lake of the Ozarks">Lake of the Ozarks</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="328" name="Puerto Vallarta">Puerto Vallarta</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="349" name="Guadalajara">Guadalajara</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="23" name="Corpus Christi / McAllen">Corpus Christi / McAllen</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="424" name="Texas Plains">Texas Plains</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="445" name="Western Kentucky">Western Kentucky</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="361" name="Puebla">Puebla</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="295" name="North Dakota">North Dakota</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="325" name="Southwest Indiana / Tri-State Area">Southwest Indiana / Tri-State Area</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="322" name="Texas Panhandle">Texas Panhandle</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="418" name="East Texas">East Texas</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="457" name="Quer�taro">Quer�taro</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="65" name="Hong Kong / Macau">Hong Kong / Macau</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="358" name="Acapulco / Ixtapa">Acapulco / Ixtapa</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="364" name="Veracruz">Veracruz</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="88" name="Springfield / Branson">Springfield / Branson</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="352" name="Hermosillo / Sonora">Hermosillo / Sonora</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="412" name="Costa Rica">Costa Rica</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="460" name="San Luis Potos�">San Luis Potos�</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="66" name="Singapore">Singapore</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="343" name="Malaysia">Malaysia</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="442" name="Guanajuato">Guanajuato</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="478" name="Oaxaca">Oaxaca</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="475" name="Coahuila">Coahuila</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="334" name="Chihuahua">Chihuahua</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="310" name="Baja California">Baja California</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="490" name="Durango">Durango</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="472" name="Tabasco">Tabasco</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="242" name="Shanghai">Shanghai</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="499" name="Chiapas">Chiapas</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="385" name="Beijing">Beijing</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="403" name="Panama City">Panama City</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="394" name="Shenzhen">Shenzhen</button>
+<button type="button" class="btn btn-sample"  onclick="myFunction(this.value, this.name)" value="487" name="San Salvador">San Salvador</button>
+  </div>
+</div>
+</div>
+</div>
+<!-- <input type="button" onclick="myFunction()" id="myBtn" value="8" name="blah"> -->
+<div id="chartContainer">
+  <!-- <div class="sliders" id="red"></div> -->
+ <script type="text/javascript">
+    
+    var svg = dimple.newSvg("#chartContainer", 1080, 450);
+    function myFunction(metroid, metroname) {
+        //var metroid = document.getElementById("myBtn").value;
+        console.log(metroid+metroname);
+
+        d3.selectAll("svg > *").remove();
+
+        var x0 = 15;
+        var y0 = 10;
+        rightbox = svg.append("g").attr("id","title");
+        rightbox.append("svg:a")
+        .attr("xlink:href","test_4.tsv")
+        .append("text")
+        .attr("x",x0+20)
+        .attr("y",y0)
+        .attr("dy",1)
+        .text(metroname) 
+        .style("fill","#DA3743")
+        .style("fill","#DA3743")
+        .style("font-size", 16)
+        .style("font-weight",300)
+        .style("font-family", 'Source Sans Pro')
+        .call(wrap, 730);
+
+
+        d3.tsv("test_"+metroid+".tsv", function (data) {
+        var myChart = new dimple.chart(svg, data);
+        myChart.setBounds(80, 50, 590, 300)
+        //var x = myChart.addTimeAxis("x", "date","%Y-%m-%d %H:%M:%S","%d %b");
+        var y = myChart.addMeasureAxis("y", "dithered_log_review_count");
+        //x.addOrderRule("Date");
+        //x.overrideMin = new Date("2015-03-03");
+        //x.overrideMax = new Date("2015-03-08");
+        //x.timePeriod = d3.time.day;
+        //x.timeInterval = 1;
+        y.fontSize = "20px";
+        y.fontFamily = "Source Sans Pro, sans-serif";
+        y.title = "Review Score";
+        console.log(x);
+        var x = myChart.addMeasureAxis("x", "dithered_log_photo_count");
+        //var z = myChart.addMeasureAxis("z", "rescaled_score");
+        var c = myChart.addColorAxis("rescaled_score",["green", "yellow", "red"]);
+        c.overrideMax = 1.0;
+        x.fontSize = "20px";
+        x.fontFamily = "Source Sans Pro, sans-serif";
+        x.title = "Photo Score";
+        //x.color = 'red';
+        //z.overrideMax = 100.;
+        //z.overrideMin = 0.5;
+        console.log(y);
+        var bubbles = myChart.addSeries(["rid","rname","photo_count","review_count", "rescaled_score","has_menu"], dimple.plot.bubble);
+        //var bubbles = myChart.addSeries(null, dimple.plot.bubble,[x,y] );
+        //bubbles.assignColor()
+        //myChart.addLegend(180, 10, 360, 20, "right");
+        // Handle the hover event - overriding the default behaviour
+        bubbles.addEventHandler("mouseover", onHover);
+        // Handle the leave event - overriding the default behaviour
+        bubbles.addEventHandler("mouseleave", onLeave);
+        //myChart.addColorAxis("z", "rescaled_score",["#DA9694", "#000000"]);
+        
+        //x.titleShape.text("Date");
+        
+        //y.titleShape.text("Review Score");
+        
+
+        myChart.draw();
+
+        svg.select("title").attr({"text":"blah"});
+
+        // rightbox.append("text")
+        // .attr("x",x0)
+        // .attr("y",y0+25)
+        // .attr("dy",1)
+        // //.text("OpenTable unvieled its new brand idenitity on March 03, 2015. We took a look at the response on Twitter over the span of a week, and computed a sentiment for each tweet. A tweet is shown as a bubble with its vertical position indicating its sentiment polarity, so that tweets with more positive sentiments are higher in the plot. We removed retweets, and scaled the tweet bubbles such that bigger bubbles indicate tweets with larger number of retweets.")
+        // .style("fill","#878787")
+        // .style("font-size", 20)
+        // .style("font-family", "'Source Sans Pro', sans-serif")
+        // .call(wrap, 670);
+
+        //  rightbox.append("text")
+        // .attr("x",x0+750)
+        // .attr("y",y0+15)
+        // .attr("dy",1)
+        // .text("Hover over a bubble to reveal details")
+        // .style("fill","#878787")
+        // .style("font-size", 14)
+        // .style("font-family", "'Source Sans Pro', sans-serif")
+        // .call(wrap, 100);
+
+
+      })};
+
+    function onHover(e) { 
+    console.log(e.seriesValue);
+    popup = svg.append("g");
+    var x = 780;
+    var y = 10;
+    // Add a rectangle surrounding the text
+    popup
+   .append("rect")
+   .attr("x",x)
+   .attr("y",y)
+   .attr("width", 270)
+   .attr("height",150)
+   .attr("rx", 5)
+   .attr("ry", 5)
+   .attr("opacity", "1.0")
+   .style("fill", 'white');
+
+
+  // Add multiple lines of text
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y + 105)
+  .attr('dy',1)
+  .text("Restaurant ID: " + e.seriesValue[0])
+  .style("font-size", 14)
+  .style("font-family", "'Source Sans Pro', sans-serif")
+  .style("fill","#B1D9E7")
+
+
+   //.call(wrap,100);
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y + 92)
+  .attr('dy',2.0)
+  .text(e.seriesValue[1]) 
+  .call(wrap, 200)
+  .style("font-size", 16)
+  .style("font-family", 'Source Sans Pro, sans-serif')
+  .style("fill", '#6C6870')
+
+
+
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y + 85)
+  .attr('dy',1)
+  .text('Photo count: '+e.seriesValue[2] )
+  .style("font-size", 14)
+  .style("fill","#DA3743")
+
+
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y+45)
+  .attr('dy',1)
+  .text("Review count: "+e.seriesValue[3] )
+  .style("font-size", 14)
+  .style("font-family", "'Source Sans Pro', sans-serif")
+  .style("fill","#DA3743")
+
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y+65)
+  .attr('dy',1)
+  .text("Has menu?: "+e.seriesValue[5] )
+  .style("font-size", 14)
+  .style("font-family", "'Source Sans Pro', sans-serif")
+  .style("fill","#DA3743")
+
+  popup
+  .append('text')
+  .attr('x', x + 10)
+  .attr('y', y + 25)
+  .attr('dy',1)
+  .text("Overall Score: " + parseFloat(e.seriesValue[4]).toPrecision(2))
+  .style("font-size", 14)
+  .style("font-family", "'Source Sans Pro', sans-serif")
+  .style("fill","#DA3743")
+
+
+    }
+
+   function onLeave(e) {
+    // Remove the popup
+    if (popup !== null) {
+    popup.remove();
+    }
+    console.log("ggg");
+    }
+
+   function wrap(text, width) {
+       
+    text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        x = text.attr("x"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
+        
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+        console.log(tspan.node().getComputedTextLength());
+      }
+    }}
+  )}
+
+
+  </script>
+</div>
+<div>
+<a href=""></a>

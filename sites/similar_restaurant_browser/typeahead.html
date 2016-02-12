@@ -1,0 +1,54 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<head>
+ <link rel="stylesheet" href="examples.css">
+</head>
+<div class="demo" id="countryCode">
+  <input class="typeahead" type="text" placeholder="Restaurant">
+</div>
+    <script>
+    var stocksData = [
+        {
+            "company_name": "Facebook",
+            "code": "fb",
+        },
+        {
+            "company_name": "Google",
+            "code": "goog",
+        },
+        {
+            "company_name": "Yahoo",
+            "code": "yhoo",
+        },
+        {
+            "company_name": "Apple",
+            "code": "aapl",
+        },
+        {
+            "company_name": "Royal Mail",
+            "code": "rmg.l",
+        },
+     ];
+    
+    var stocks = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('RNAME_ID'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            //local: stocksData
+            prefetch: 'restaurants.json'
+        });
+
+        stocks.initialize();
+
+        $('#countryCode .typeahead').typeahead(
+            null, {
+              hint: true,
+              highlight: true,
+            name: 'stocks',
+            displayKey: 'RNAME_ID',
+            source: stocks.ttAdapter()
+        }).on('typeahead:selected', function(event, data){ 
+        console.log(data.RID);           
+            $('.typeahead').val(data.RID);        
+        });
+ </script>

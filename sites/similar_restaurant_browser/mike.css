@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow: hidden;
+}
+a, a:visited, a:active, a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+input {
+    width: 360px;
+    font-size: 1em;
+    padding: 10px;
+    border: none;
+    border: 1px solid #eee;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-bottom: 2px solid #DA3743;
+    background: #fff;
+    outline: none;
+    margin: 15px;
+    margin-bottom: 0;
+    z-index: 101;
+    position: absolute;
+}
+h1, h3, h5 {
+    font-weight: 400;
+}
+
+.tt-menu {
+    margin: 0 16px;
+    width: 360px;
+    border: 1px solid #eee;
+    /*box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);*/
+    background: #fff;
+}
+.tt-hint {
+    color: rgba(0,0,0,0.25) !important;
+}
+.tt-cursor {
+    background: #eee;
+}
+.tt-suggestion {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.tt-suggestion:hover {
+    background: #eee;
+}
+.tt-suggestion:active {
+    background: #eee;
+}
+
+.explain {
+    font-family: 'Source Sans Pro', sans-serif;
+    /*border-bottom: 2px solid #DA3743;*/
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    padding-left: 10px;
+    position: absolute;
+    top: 15px;
+    left: 380px;
+    font-weight: 100;
+}
+.explain i {
+    padding-right: 5px;
+}
+.withlove {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: 360px;
+    left: 50%; margin-left: -180px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-align: center;
+}
+.withlove i {
+    color: #DA3743;
+}
+
+/*======================================================= SUMMARY */
+.summary {
+    width: 480px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #333;
+    color: #fff;
+    z-index: 10;
+    border-top: 5px solid #DA3743;
+    display: none;
+    padding: 10px 16px;
+}
+.summary>div {
+    display: flex;
+    width: 100%:
+    padding: 10px 16px;
+}
+.summary>div .image {
+    width: 80px;
+    min-width: 80px;
+    padding: 6px 0;
+}
+.summary>div .image img {
+    width: 100%;
+    height: auto;
+}
+.summary ul {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding-left: 16px;
+}
+.summary ul li {
+    display: flex;
+    align-items: center;
+}
+.summary ul .title {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+.summary ul .hood {
+    font-size: 0.8em;
+}
+.summary .price, .summary .rating {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.summary .price {
+    font-size: 0.9em;
+}
+.summary .price span {
+    color: #ccc;
+}
+.summary .rating span {
+    color: #999;
+    font-weight: 100;
+    font-size: 0.8em;
+    padding: 0 5px;
+}
+
+/*======================================================= RESULTS */
+.result {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 960px;
+    height: 960px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+}
+.result .logo {
+    width: 64px;
+    height: 46px;
+    position: absolute;
+    background: url('https://avatars2.githubusercontent.com/u/2653541?v=3&s=200') center center no-repeat;
+    background-size: cover;
+    margin-top: -4px;
+    margin-left: -36px;
+    z-index: 100;
+}
+.result>ul {
+    -webkit-transition: all 0.25s ease-in-out;
+}
+.result>ul.list {
+    margin-top: -25%;
+    -webkit-transition-delay: 0.25s;
+}
+.result>ul>li {
+    width: 100%;
+    -webkit-transform-origin: 0% 50%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -webkit-font-smoothing: antialiased !important;
+    position: absolute;
+    padding: 5px 50px;
+    cursor: pointer;
+    opacity: 0;
+}
+.result>ul>li:hover {
+    -webkit-transition: all 0.25s ease-in-out;
+    padding: 5px 120px !important;
+    color: #DA3743;
+}
+.result>ul>li.fan {
+    opacity: 1;
+    padding: 5px 100px;
+}
+.result>ul>li.list {
+    opacity: 1;
+    padding: 5px 100px;
+}
+.result>ul>li.listrelative {
+    position: relative;
+}
+
+.breadcrumbs {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 48px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+.breadcrumbs li {
+    padding: 10px;
+    color: #999;
+}

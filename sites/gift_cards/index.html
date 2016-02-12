@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+  <head >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+  </head>
+  <style>
+    body {font-family: 'Source Sans Pro', sans-serif;}
+    h1   {color:#DA3743}
+    h3   {color:#60B2D0}
+    p    {color:#356273}
+  </style>
+  <body>
+    <div class="page-header">
+      <h1 align="center" >  Buying an OpenTable Gift Card:  What's the Occasion?  </h1>
+       <h3 align="center">  A data science analysis for the gifts team  </h3>
+      </div>
+    <div class="container">
+      <p>
+      We looked at nearly 800,000 snippets of text that people put in their gift cards to get a sense of why they are buying them. Since most of these reasons are phrases, such as "Happy 36th Birthday", we used a data-driven  phrase detection algorithm inspired by <a href="http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf"> this paper </a>. <br>  Further analyis can be performed by clustering these phrases according to concepts (such as birthdays, special days, other life events etc.), but the analysis below seems sufficient to get a very good sense of why gifts cards are being gifted!   
+<br>
+First, we show the top phrases as a word cloud, which is followed by the table which shows a phrase and the fraction of times it appears in the corpus as a percentage. Enjoy!
+</p>
+     </div>
+<div class="container">
+<img src= 'gifts.png' width=1200px align="center"> </img>
+</dv>
+    <div class="container">
+      <table data-toggle="table" 
+	     data-url="gifts.json"
+	     data-cache="false" 
+	     data-height="699" 
+	     data-pagination="true"
+	     data-search="true"
+	     data-row-style="rowStyle">
+	<thead>
+        <tr>
+	  <th data-field="serial_index">Index</th>
+	  <th data-field="phrase">Phrases</th>
+	  <th data-field="percentage_count">Percentage Count</th>
+        </tr>
+	</thead>
+      </table>
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.js"></script>
+    </body>
+
+</html>
